@@ -1,0 +1,2641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/hoja-estilos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Heebo:wght@400;900&family=Montserrat:wght@100&family=Mukta:wght@200;800&family=Nunito+Sans:wght@900&family=PT+Sans:ital,wght@1,700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https: //fonts.googleapis.com/css2? family = Fira + Sans: ital @ 1 & family = Heebo: wght @ 400; 900 & family = Montserrat: wght @ 100 & family = Mukta: wght @ 200; 800 & family = Nunito + Sans: wght @ 900 & family = PT + Sans: ital, wght @ 1,700 & family = Roboto: wght @ 400; 500; 700 & familia = Signika + Negativo: wght @ 700 &family = Ubuntu: wght @ 700 & family = Zen + Kaku + Gothic + Antique:wght @ 300 & family =Zen + Maru + Gothic: wght @ 300 & display = swap "
+        rel=" stylesheet ">
+    <title>Preguntas para el paciente</title>
+</head>
+
+<body class="pantalla-dos" id="pantalla-2-2">
+
+    <div class="pantalla-2">
+        <img src="../static/images/fondo-3.jpg" alt="" id="fondo3">
+    </div>
+
+    <div class="cuadro-de-preguntas">
+        <h2>Formulario de sintomas</h2>
+        <h4>Debera responder las siguientes preguntas con un si o no para poder diagnosticar mejor su estado</h4>
+
+        <form id="sintomas-form" name="sintomas-form" method="POST">
+            {% csrf_token %}
+            <div class="mover-preguntas">
+                <label for="start">1.-¿Tiene sensación de ardor? </label>
+                <select id='select1' name="respuesta1" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="sensacion de ardor">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container1" style='display: none;' id="container">
+
+                    <input type="radio" class="radio" name="progress1" value="0" id="cero1" checked>
+                    
+                    <input type="radio" class="radio" name="progress1" value="0.1" id="uno1">
+                    <label for="uno1" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress1" value="0.2" id="dos1">
+                    <label for="dos1" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress1" value="0.3" id="tres1">
+                    <label for="tres1" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress1" value="0.4" id="cuatro1">
+                    <label for="cuatro1" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress1" value="0.5" id="cinco1">
+                    <label for="cinco1" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress1" value="0.6" id="seis1">
+                    <label for="seis1" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress1" value="0.7" id="siete1">
+                    <label for="siete1" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress1" value="0.8" id="ocho1">
+                    <label for="ocho1" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress1" value="0.9" id="nueve1">
+                    <label for="nueve1" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress1" value="1.0" id="diez1">
+                    <label for="diez1" class="label">10</label>
+            
+                    <div class="progress1">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">2.-¿Cuenta con dolor de pecho? </label>
+                <select id='select2' name="respuesta2" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor de pecho">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container2" style='display: none;' id="container">
+
+                    <input type="radio" class="radio" name="progress2" value="0" id="cero2" checked>
+
+                    <input type="radio" class="radio" name="progress2" value="0.1" id="uno2">
+                    <label for="uno2" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress2" value="0.2" id="dos2">
+                    <label for="dos2" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress2" value="0.3" id="tres2">
+                    <label for="tres2" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress2" value="0.4" id="cuatro2">
+                    <label for="cuatro2" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress2" value="0.5" id="cinco2">
+                    <label for="cinco2" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress2" value="0.6" id="seis2">
+                    <label for="seis2" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress2" value="0.7" id="siete2">
+                    <label for="siete2" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress2" value="0.8" id="ocho2">
+                    <label for="ocho2" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress2" value="0.9" id="nueve2">
+                    <label for="nueve2" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress2" value="1.0" id="diez2">
+                    <label for="diez2" class="label">10</label>
+            
+                    <div class="progress2">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">3.-¿Dificultad para tragar? </label>
+                <select id='select3' name="respuesta3" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dificultad para tragar">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container3" style='display: none;' id="container">
+
+                    <input type="radio" class="radio" name="progress3" value="0" id="cero3" checked>
+
+                    <input type="radio" class="radio" name="progress3" value="0.1" id="uno3">
+                    <label for="uno3" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress3" value="0.2" id="dos3">
+                    <label for="dos3" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress3" value="0.3" id="tres3">
+                    <label for="tres3" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress3" value="0.4" id="cuatro3">
+                    <label for="cuatro3" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress3" value="0.5" id="cinco3">
+                    <label for="cinco3" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress3" value="0.6" id="seis3">
+                    <label for="seis3" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress3" value="0.7" id="siete3">
+                    <label for="siete3" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress3" value="0.8" id="ocho3">
+                    <label for="ocho3" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress3" value="0.9" id="nueve3">
+                    <label for="nueve3" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress3" value="1.0" id="diez3">
+                    <label for="diez3" class="label">10</label>
+            
+                    <div class="progress3">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">4.-¿Nudo en la garganta? </label>
+                <select id='select4' name="respuesta4" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="nudo en la garganta">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container4" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress4" value="0" id="cero4" checked>
+
+                    <input type="radio" class="radio" name="progress4" value="0.1" id="uno4">
+                    <label for="uno4" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress4" value="0.2" id="dos4">
+                    <label for="dos4" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress4" value="0.3" id="tres4">
+                    <label for="tres4" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress4" value="0.4" id="cuatro4">
+                    <label for="cuatro4" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress4" value="0.5" id="cinco4">
+                    <label for="cinco4" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress4" value="0.6" id="seis4">
+                    <label for="seis4" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress4" value="0.7" id="siete4">
+                    <label for="siete4" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress4" value="0.8" id="ocho4">
+                    <label for="ocho4" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress4" value="0.9" id="nueve4">
+                    <label for="nueve4" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress4" value="1.0" id="diez4">
+                    <label for="diez4" class="label">10</label>
+            
+                    <div class="progress4">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">5.-¿Regurgitación? </label>
+                <select id='select5' name="respuesta5" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="regurgitacion">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container5" style='display: none;' id="container">
+
+                    <input type="radio" class="radio" name="progress5" value="0" id="cero5" checked>
+
+                    <input type="radio" class="radio" name="progress5" value="0.1" id="uno5">
+                    <label for="uno5" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress5" value="0.2" id="dos5">
+                    <label for="dos5" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress5" value="0.3" id="tres5">
+                    <label for="tres5" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress5" value="0.4" id="cuatro5">
+                    <label for="cuatro5" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress5" value="0.5" id="cinco5">
+                    <label for="cinco5" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress5" value="0.6" id="seis5">
+                    <label for="seis5" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress5" value="0.7" id="siete5">
+                    <label for="siete5" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress5" value="0.8" id="ocho5">
+                    <label for="ocho5" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress5" value="0.9" id="nueve5">
+                    <label for="nueve5" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress5" value="1.0" id="diez5">
+                    <label for="diez5" class="label">10</label>
+            
+                    <div class="progress5">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">6.-¿Tiene dolor estomacal? </label>
+                <select id='select6' name="respuesta6" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor estomacal">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container6" style='display: none;' id="container">
+
+                    <input type="radio" class="radio" name="progress6" value="0" id="cero6" checked>
+
+                    <input type="radio" class="radio" name="progress6" value="0.1" id="uno6">
+                    <label for="uno6" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress6" value="0.2" id="dos6">
+                    <label for="dos6" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress6" value="0.3" id="tres6">
+                    <label for="tres6" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress6" value="0.4" id="cuatro6">
+                    <label for="cuatro6" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress6" value="0.5" id="cinco6">
+                    <label for="cinco6" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress6" value="0.6" id="seis6">
+                    <label for="seis6" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress6" value="0.7" id="siete6">
+                    <label for="siete6" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress6" value="0.8" id="ocho6">
+                    <label for="ocho6" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress6" value="0.9" id="nueve6">
+                    <label for="nueve6" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress6" value="1.0" id="diez6">
+                    <label for="diez6" class="label">10</label>
+            
+                    <div class="progress6">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">7.-¿Intolerancia a las bebidas con gas? </label>
+                <select id='select7' name="respuesta7" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="intolerancia a las bebidas con gas">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container7" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress7" value="0" id="cero7" checked>
+
+                    <input type="radio" class="radio" name="progress7" value="0.1" id="uno7">
+                    <label for="uno7" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress7" value="0.2" id="dos7">
+                    <label for="dos7" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress7" value="0.3" id="tres7">
+                    <label for="tres7" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress7" value="0.4" id="cuatro7">
+                    <label for="cuatro7" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress7" value="0.5" id="cinco7">
+                    <label for="cinco7" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress7" value="0.6" id="seis7">
+                    <label for="seis7" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress7" value="0.7" id="siete7">
+                    <label for="siete7" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress7" value="0.8" id="ocho7">
+                    <label for="ocho7" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress7" value="0.9" id="nueve7">
+                    <label for="nueve7" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress7" value="1.0" id="diez7">
+                    <label for="diez7" class="label">10</label>
+            
+                    <div class="progress7">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">8.-¿Siente náuseas? </label>
+                <select id='select8' name="respuesta8" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="nauseas">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container8" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress8" value="0" id="cero8" checked>
+
+                    <input type="radio" class="radio" name="progress8" value="0.1" id="uno8">
+                    <label for="uno8" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress8" value="0.2" id="dos8">
+                    <label for="dos8" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress8" value="0.3" id="tres8">
+                    <label for="tres8" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress8" value="0.4" id="cuatro8">
+                    <label for="cuatro8" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress8" value="0.5" id="cinco8">
+                    <label for="cinco8" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress8" value="0.6" id="seis8">
+                    <label for="seis8" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress8" value="0.7" id="siete8">
+                    <label for="siete8" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress8" value="0.8" id="ocho8">
+                    <label for="ocho8" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress8" value="0.9" id="nueve8">
+                    <label for="nueve8" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress8" value="1.0" id="diez8">
+                    <label for="diez8" class="label">10</label>
+            
+                    <div class="progress8">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">9.-¿Acidez de estómago? </label>
+                <select id='select9' name="respuesta9" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="acidez de estomago">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container9" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress9" value="0" id="cero9" checked>
+
+                    <input type="radio" class="radio" name="progress9" value="0.1" id="uno9">
+                    <label for="uno9" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress9" value="0.2" id="dos9">
+                    <label for="dos9" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress9" value="0.3" id="tres9">
+                    <label for="tres9" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress9" value="0.4" id="cuatro9">
+                    <label for="cuatro9" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress9" value="0.5" id="cinco9">
+                    <label for="cinco9" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress9" value="0.6" id="seis9">
+                    <label for="seis9" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress9" value="0.7" id="siete9">
+                    <label for="siete9" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress9" value="0.8" id="ocho9">
+                    <label for="ocho9" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress9" value="0.9" id="nueve9">
+                    <label for="nueve9" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress9" value="1.0" id="diez9">
+                    <label for="diez9" class="label">10</label>
+            
+                    <div class="progress9">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">10.-¿Hinchazón? </label>
+                <select id='select10' name="respuesta10" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="hinchazon">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container10" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress10" value="0" id="cero10" checked>
+
+                    <input type="radio" class="radio" name="progress10" value="0.1" id="uno10">
+                    <label for="uno10" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress10" value="0.2" id="dos10">
+                    <label for="dos10" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress10" value="0.3" id="tres10">
+                    <label for="tres10" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress10" value="0.4" id="cuatro10">
+                    <label for="cuatro10" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress10" value="0.5" id="cinco10">
+                    <label for="cinco10" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress10" value="0.6" id="seis10">
+                    <label for="seis10" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress10" value="0.7" id="siete10">
+                    <label for="siete10" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress10" value="0.8" id="ocho10">
+                    <label for="ocho10" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress10" value="0.9" id="nueve10">
+                    <label for="nueve10" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress10" value="1.0" id="diez10">
+                    <label for="diez10" class="label">10</label>
+            
+                    <div class="progress10">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">11.-¿Dolor abdominal? </label>
+                <select id='select11' name="respuesta11" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor abdominal">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container11" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress11" value="0" id="cero11" checked>
+
+                    <input type="radio" class="radio" name="progress11" value="0.1" id="uno11">
+                    <label for="uno11" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress11" value="0.2" id="dos11">
+                    <label for="dos11" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress11" value="0.3" id="tres11">
+                    <label for="tres11" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress11" value="0.4" id="cuatro11">
+                    <label for="cuatro11" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress11" value="0.5" id="cinco11">
+                    <label for="cinco11" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress11" value="0.6" id="seis11">
+                    <label for="seis11" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress11" value="0.7" id="siete11">
+                    <label for="siete11" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress11" value="0.8" id="ocho11">
+                    <label for="ocho11" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress11" value="0.9" id="nueve11">
+                    <label for="nueve11" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress11" value="1.0" id="diez11">
+                    <label for="diez11" class="label">10</label>
+            
+                    <div class="progress11">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">12.-¿Diarrea? </label>
+                <select id='select12' name="respuesta12" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="diarrea">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container12" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress12" value="0" id="cero12" checked>
+
+                    <input type="radio" class="radio" name="progress12" value="0.1" id="uno12">
+                    <label for="uno12" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress12" value="0.2" id="dos12">
+                    <label for="dos12" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress12" value="0.3" id="tres12">
+                    <label for="tres12" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress12" value="0.4" id="cuatro12">
+                    <label for="cuatro12" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress12" value="0.5" id="cinco12">
+                    <label for="cinco12" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress12" value="0.6" id="seis12">
+                    <label for="seis12" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress12" value="0.7" id="siete12">
+                    <label for="siete12" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress12" value="0.8" id="ocho12">
+                    <label for="ocho12" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress12" value="0.9" id="nueve12">
+                    <label for="nueve12" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress12" value="1.0" id="diez12">
+                    <label for="diez12" class="label">10</label>
+            
+                    <div class="progress12">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">13.-¿Irritabilidad? </label>
+                <select id='select13' name="respuesta13" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="irritabilidad">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container13" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress13" value="0" id="cero13" checked>
+
+                    <input type="radio" class="radio" name="progress13" value="0.1" id="uno13">
+                    <label for="uno13" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress13" value="0.2" id="dos13">
+                    <label for="dos13" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress13" value="0.3" id="tres13">
+                    <label for="tres13" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress13" value="0.4" id="cuatro13">
+                    <label for="cuatro13" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress13" value="0.5" id="cinco13">
+                    <label for="cinco13" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress13" value="0.6" id="seis13">
+                    <label for="seis13" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress13" value="0.7" id="siete13">
+                    <label for="siete13" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress13" value="0.8" id="ocho13">
+                    <label for="ocho13" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress13" value="0.9" id="nueve13">
+                    <label for="nueve13" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress13" value="1.0" id="diez13">
+                    <label for="diez13" class="label">13</label>
+            
+                    <div class="progress13">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">14.-¿Cuenta con decaimiento anímico? </label>
+                <select id='select14' name="respuesta14" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="decaimiento animico">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container14" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress14" value="0" id="cero14" checked>
+
+                    <input type="radio" class="radio" name="progress14" value="0.1" id="uno14">
+                    <label for="uno14" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress14" value="0.2" id="dos14">
+                    <label for="dos14" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress14" value="0.3" id="tres14">
+                    <label for="tres14" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress14" value="0.4" id="cuatro14">
+                    <label for="cuatro14" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress14" value="0.5" id="cinco14">
+                    <label for="cinco14" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress14" value="0.6" id="seis14">
+                    <label for="seis14" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress14" value="0.7" id="siete14">
+                    <label for="siete14" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress14" value="0.8" id="ocho14">
+                    <label for="ocho14" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress14" value="0.9" id="nueve14">
+                    <label for="nueve14" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress14" value="1.0" id="diez14">
+                    <label for="diez14" class="label">10</label>
+            
+                    <div class="progress14">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">15.-¿Cuenta con gases? </label>
+                <select id='select15' name="respuesta15" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="gases">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container15" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress15" value="0" id="cero15" checked>
+
+                    <input type="radio" class="radio" name="progress15" value="0.1" id="uno15">
+                    <label for="uno15" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress15" value="0.2" id="dos15">
+                    <label for="dos15" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress15" value="0.3" id="tres15">
+                    <label for="tres15" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress15" value="0.4" id="cuatro15">
+                    <label for="cuatro15" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress15" value="0.5" id="cinco15">
+                    <label for="cinco15" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress15" value="0.6" id="seis15">
+                    <label for="seis15" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress15" value="0.7" id="siete15">
+                    <label for="siete15" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress15" value="0.8" id="ocho15">
+                    <label for="ocho15" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress15" value="0.9" id="nueve15">
+                    <label for="nueve15" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress15" value="1.0" id="diez15">
+                    <label for="diez15" class="label">10</label>
+            
+                    <div class="progress15">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">16.-¿Cuenta con vómito? </label>
+                <select id='select16' name="respuesta16" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="vomito">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container16" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress16" value="0" id="cero16" checked>
+
+                    <input type="radio" class="radio" name="progress16" value="0.1" id="uno16">
+                    <label for="uno16" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress16" value="0.2" id="dos16">
+                    <label for="dos16" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress16" value="0.3" id="tres16">
+                    <label for="tres16" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress16" value="0.4" id="cuatro16">
+                    <label for="cuatro16" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress16" value="0.5" id="cinco16">
+                    <label for="cinco16" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress16" value="0.6" id="seis16">
+                    <label for="seis16" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress16" value="0.7" id="siete16">
+                    <label for="siete16" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress16" value="0.8" id="ocho16">
+                    <label for="ocho16" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress16" value="0.9" id="nueve16">
+                    <label for="nueve16" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress16" value="1.0" id="diez16">
+                    <label for="diez16" class="label">10</label>
+            
+                    <div class="progress16">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">17.-¿Cuenta con fatiga? </label>
+                <select id='select17' name="respuesta17" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="fatiga">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container17" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress17" value="0" id="cero17" checked>
+
+                    <input type="radio" class="radio" name="progress17" value="0.1" id="uno17">
+                    <label for="uno17" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress17" value="0.2" id="dos17">
+                    <label for="dos17" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress17" value="0.3" id="tres17">
+                    <label for="tres17" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress17" value="0.4" id="cuatro17">
+                    <label for="cuatro17" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress17" value="0.5" id="cinco17">
+                    <label for="cinco17" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress17" value="0.6" id="seis17">
+                    <label for="seis17" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress17" value="0.7" id="siete17">
+                    <label for="siete17" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress17" value="0.8" id="ocho17">
+                    <label for="ocho17" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress17" value="0.9" id="nueve17">
+                    <label for="nueve17" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress17" value="1.0" id="diez17">
+                    <label for="diez17" class="label">10</label>
+            
+                    <div class="progress17">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">18.-¿Cuenta pérdida de apetito? </label>
+                <select id='select18' name="respuesta18" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="perdida de apetito">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container18" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress18" value="0" id="cero18" checked>
+
+                    <input type="radio" class="radio" name="progress18" value="0.1" id="uno18">
+                    <label for="uno18" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress18" value="0.2" id="dos18">
+                    <label for="dos18" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress18" value="0.3" id="tres18">
+                    <label for="tres18" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress18" value="0.4" id="cuatro18">
+                    <label for="cuatro18" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress18" value="0.5" id="cinco18">
+                    <label for="cinco18" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress18" value="0.6" id="seis18">
+                    <label for="seis18" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress18" value="0.7" id="siete18">
+                    <label for="siete18" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress18" value="0.8" id="ocho18">
+                    <label for="ocho18" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress18" value="0.9" id="nueve18">
+                    <label for="nueve18" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress18" value="1.0" id="diez18">
+                    <label for="diez18" class="label">10</label>
+            
+                    <div class="progress18">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">19.-¿Adelgazamiento involuntario? </label>
+                <select id='select19' name="respuesta19" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="adelgazamiento involuntario">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container19" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress19" value="0" id="cero19" checked>
+
+                    <input type="radio" class="radio" name="progress19" value="0.1" id="uno19">
+                    <label for="uno19" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress19" value="0.2" id="dos19">
+                    <label for="dos19" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress19" value="0.3" id="tres19">
+                    <label for="tres19" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress19" value="0.4" id="cuatro19">
+                    <label for="cuatro19" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress19" value="0.5" id="cinco19">
+                    <label for="cinco19" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress19" value="0.6" id="seis19">
+                    <label for="seis19" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress19" value="0.7" id="siete19">
+                    <label for="siete19" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress19" value="0.8" id="ocho19">
+                    <label for="ocho19" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress19" value="0.9" id="nueve19">
+                    <label for="nueve19" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress19" value="1.0" id="diez19">
+                    <label for="diez19" class="label">10</label>
+            
+                    <div class="progress19">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">20.-¿Picazón en la piel? </label>
+                <select id='select20' name="respuesta20" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="picazon en la piel">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container20" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress20" value="0" id="cero20" checked>
+
+                    <input type="radio" class="radio" name="progress20" value="0.1" id="uno20">
+                    <label for="uno20" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress20" value="0.2" id="dos20">
+                    <label for="dos20" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress20" value="0.3" id="tres20">
+                    <label for="tres20" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress20" value="0.4" id="cuatro20">
+                    <label for="cuatro20" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress20" value="0.5" id="cinco20">
+                    <label for="cinco20" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress20" value="0.6" id="seis20">
+                    <label for="seis20" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress20" value="0.7" id="siete20">
+                    <label for="siete20" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress20" value="0.8" id="ocho20">
+                    <label for="ocho20" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress20" value="0.9" id="nueve20">
+                    <label for="nueve20" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress20" value="1.0" id="diez20">
+                    <label for="diez20" class="label">10</label>
+            
+                    <div class="progress20">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">21.-¿Presenta hematomas? </label>
+                <select id='select21' name="respuesta21" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="hematomas">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container21" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress21" value="0" id="cero21" checked>
+
+                    <input type="radio" class="radio" name="progress21" value="0.1" id="uno21">
+                    <label for="uno21" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress21" value="0.2" id="dos21">
+                    <label for="dos21" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress21" value="0.3" id="tres21">
+                    <label for="tres21" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress21" value="0.4" id="cuatro21">
+                    <label for="cuatro21" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress21" value="0.5" id="cinco21">
+                    <label for="cinco21" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress21" value="0.6" id="seis21">
+                    <label for="seis21" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress21" value="0.7" id="siete21">
+                    <label for="siete21" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress21" value="0.8" id="ocho21">
+                    <label for="ocho21" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress21" value="0.9" id="nueve21">
+                    <label for="nueve21" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress21" value="1.0" id="diez21">
+                    <label for="diez21" class="label">10</label>
+            
+                    <div class="progress21">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">22.-¿Confusión? </label>
+                <select id='select22' name="respuesta22" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="confusion">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container22" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress22" value="0" id="cero22" checked>
+
+                    <input type="radio" class="radio" name="progress22" value="0.1" id="uno22">
+                    <label for="uno22" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress22" value="0.2" id="dos22">
+                    <label for="dos22" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress22" value="0.3" id="tres22">
+                    <label for="tres22" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress22" value="0.4" id="cuatro22">
+                    <label for="cuatro22" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress22" value="0.5" id="cinco22">
+                    <label for="cinco22" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress22" value="0.6" id="seis22">
+                    <label for="seis22" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress22" value="0.7" id="siete22">
+                    <label for="siete22" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress22" value="0.8" id="ocho22">
+                    <label for="ocho22" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress22" value="0.9" id="nueve22">
+                    <label for="nueve22" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress22" value="1.0" id="diez22">
+                    <label for="diez22" class="label">10</label>
+            
+                    <div class="progress22">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">23.-¿Tiene dificultad para hablar? </label>
+                <select id='select23' name="respuesta23" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dificultad para hablar">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container23" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress23" value="0" id="cero23" checked>
+
+                    <input type="radio" class="radio" name="progress23" value="0.1" id="uno23">
+                    <label for="uno23" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress23" value="0.2" id="dos23">
+                    <label for="dos23" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress23" value="0.3" id="tres23">
+                    <label for="tres23" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress23" value="0.4" id="cuatro23">
+                    <label for="cuatro23" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress23" value="0.5" id="cinco23">
+                    <label for="cinco23" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress23" value="0.6" id="seis23">
+                    <label for="seis23" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress23" value="0.7" id="siete23">
+                    <label for="siete23" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress23" value="0.8" id="ocho23">
+                    <label for="ocho23" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress23" value="0.9" id="nueve23">
+                    <label for="nueve23" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress23" value="1.0" id="diez23">
+                    <label for="diez23" class="label">10</label>
+            
+                    <div class="progress23">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">24.-¿Hinchazón de las piernas? </label>
+                <select id='select24' name="respuesta24" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="hinchazon de las piernas">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container24" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress24" value="0" id="cero24" checked>
+
+                    <input type="radio" class="radio" name="progress24" value="0.1" id="uno24">
+                    <label for="uno24" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress24" value="0.2" id="dos24">
+                    <label for="dos24" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress24" value="0.3" id="tres24">
+                    <label for="tres24" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress24" value="0.4" id="cuatro24">
+                    <label for="cuatro24" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress24" value="0.5" id="cinco24">
+                    <label for="cinco24" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress24" value="0.6" id="seis24">
+                    <label for="seis24" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress24" value="0.7" id="siete24">
+                    <label for="siete24" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress24" value="0.8" id="ocho24">
+                    <label for="ocho24" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress24" value="0.9" id="nueve24">
+                    <label for="nueve24" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress24" value="1.0" id="diez24">
+                    <label for="diez24" class="label">10</label>
+            
+                    <div class="progress24">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">25.-¿Cuenta con llagas en la boca? </label>
+                <select id='select25' name="respuesta25" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="llagas en la boca">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container25" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress25" value="0" id="cero25" checked>
+
+                    <input type="radio" class="radio" name="progress25" value="0.1" id="uno25">
+                    <label for="uno25" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress25" value="0.2" id="dos25">
+                    <label for="dos25" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress25" value="0.3" id="tres25">
+                    <label for="tres25" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress25" value="0.4" id="cuatro25">
+                    <label for="cuatro25" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress25" value="0.5" id="cinco25">
+                    <label for="cinco25" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress25" value="0.6" id="seis25">
+                    <label for="seis25" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress25" value="0.7" id="siete25">
+                    <label for="siete25" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress25" value="0.8" id="ocho25">
+                    <label for="ocho25" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress25" value="0.9" id="nueve25">
+                    <label for="nueve25" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress25" value="1.0" id="diez25">
+                    <label for="diez25" class="label">10</label>
+            
+                    <div class="progress25">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">26.-¿Desnutrición? </label>
+                <select id='select26' name="respuesta26" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="desnutricion">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                 <div class="container26" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress26" value="0" id="cero26" checked>
+
+                    <input type="radio" class="radio" name="progress26" value="0.1" id="uno26">
+                    <label for="uno26" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress26" value="0.2" id="dos26">
+                    <label for="dos26" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress26" value="0.3" id="tres26">
+                    <label for="tres26" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress26" value="0.4" id="cuatro26">
+                    <label for="cuatro26" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress26" value="0.5" id="cinco26">
+                    <label for="cinco26" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress26" value="0.6" id="seis26">
+                    <label for="seis26" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress26" value="0.7" id="siete26">
+                    <label for="siete26" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress26" value="0.8" id="ocho26">
+                    <label for="ocho26" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress26" value="0.9" id="nueve26">
+                    <label for="nueve26" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress26" value="1.0" id="diez26">
+                    <label for="diez26" class="label">10</label>
+            
+                    <div class="progress26">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">27.-¿Sangre en las heces? </label>
+                <select id='select27' name="respuesta27" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="sangre en las heces">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container27" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress27" value="0" id="cero27" checked>
+
+                    <input type="radio" class="radio" name="progress27" value="0.1" id="uno27">
+                    <label for="uno27" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress27" value="0.2" id="dos27">
+                    <label for="dos27" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress27" value="0.3" id="tres27">
+                    <label for="tres27" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress27" value="0.4" id="cuatro27">
+                    <label for="cuatro27" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress27" value="0.5" id="cinco27">
+                    <label for="cinco27" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress27" value="0.6" id="seis27">
+                    <label for="seis27" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress27" value="0.7" id="siete27">
+                    <label for="siete27" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress27" value="0.8" id="ocho27">
+                    <label for="ocho27" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress27" value="0.9" id="nueve27">
+                    <label for="nueve27" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress27" value="1.0" id="diez27">
+                    <label for="diez27" class="label">10</label>
+            
+                    <div class="progress27">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">28.-¿Pus en las heces? </label>
+                <select id='select28' name="respuesta28" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="pus en las heces">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container28" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress28" value="0" id="cero28" checked>
+
+                    <input type="radio" class="radio" name="progress28" value="0.1" id="uno28">
+                    <label for="uno28" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress28" value="0.2" id="dos28">
+                    <label for="dos28" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress28" value="0.3" id="tres28">
+                    <label for="tres28" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress28" value="0.4" id="cuatro29">
+                    <label for="cuatro28" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress28" value="0.5" id="cinco28">
+                    <label for="cinco28" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress28" value="0.6" id="seis28">
+                    <label for="seis28" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress28" value="0.7" id="siete28">
+                    <label for="siete28" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress28" value="0.8" id="ocho28">
+                    <label for="ocho28" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress28" value="0.9" id="nueve28">
+                    <label for="nueve28" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress28" value="1.0" id="diez28">
+                    <label for="diez28" class="label">10</label>
+            
+                    <div class="progress28">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">29.-¿Heces de olor fétido? </label>
+                <select id='select29' name="respuesta29" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="heces de olor fetido">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container29" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress29" value="0" id="cero29" checked>
+
+                    <input type="radio" class="radio" name="progress29" value="0.1" id="uno29">
+                    <label for="uno29" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress29" value="0.2" id="dos29">
+                    <label for="dos29" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress29" value="0.3" id="tres29">
+                    <label for="tres29" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress29" value="0.4" id="cuatro29">
+                    <label for="cuatro29" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress29" value="0.5" id="cinco29">
+                    <label for="cinco29" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress29" value="0.6" id="seis29">
+                    <label for="seis29" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress29" value="0.7" id="siete29">
+                    <label for="siete29" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress29" value="0.8" id="ocho29">
+                    <label for="ocho29" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress29" value="0.9" id="nueve29">
+                    <label for="nueve29" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress29" value="1.0" id="diez29">
+                    <label for="diez29" class="label">10</label>
+            
+                    <div class="progress29">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">30.-¿Grasa en las heces? </label>
+                <select id='select30' name="respuesta30" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="grasa en las heces">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container30" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress30" value="0" id="cero30" checked>
+
+                    <input type="radio" class="radio" name="progress30" value="0.1" id="uno30">
+                    <label for="uno30" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress30" value="0.2" id="dos30">
+                    <label for="dos30" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress30" value="0.3" id="tres30">
+                    <label for="tres30" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress30" value="0.4" id="cuatro30">
+                    <label for="cuatro30" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress30" value="0.5" id="cinco30">
+                    <label for="cinco30" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress30" value="0.6" id="seis30">
+                    <label for="seis30" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress30" value="0.7" id="siete30">
+                    <label for="siete30" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress30" value="0.8" id="ocho30">
+                    <label for="ocho30" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress30" value="0.9" id="nueve30">
+                    <label for="nueve30" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress30" value="1.0" id="diez30">
+                    <label for="diez30" class="label">10</label>
+            
+                    <div class="progress30">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">31.-¿Cuenta con debilidad? </label>
+                <select id='select31' name="respuesta31" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="debilidad">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container31" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress31" value="0" id="cero31" checked>
+
+                    <input type="radio" class="radio" name="progress31" value="0.1" id="uno31">
+                    <label for="uno31" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress31" value="0.2" id="dos31">
+                    <label for="dos31" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress31" value="0.3" id="tres31">
+                    <label for="tres31" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress31" value="0.4" id="cuatro31">
+                    <label for="cuatro31" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress31" value="0.5" id="cinco31">
+                    <label for="cinco31" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress31" value="0.6" id="seis31">
+                    <label for="seis31" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress31" value="0.7" id="siete31">
+                    <label for="siete31" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress31" value="0.8" id="ocho31">
+                    <label for="ocho31" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress31" value="0.9" id="nueve31">
+                    <label for="nueve31" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress31" value="1.0" id="diez31">
+                    <label for="diez31" class="label">10</label>
+            
+                    <div class="progress31">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">32.-¿Cuenta con dolor rectal? </label>
+                <select id='select32' name="respuesta32" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor rectal">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container32" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress32" value="0" id="cero32" checked>
+
+                    <input type="radio" class="radio" name="progress32" value="0.1" id="uno32">
+                    <label for="uno32" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress32" value="0.2" id="dos32">
+                    <label for="dos32" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress32" value="0.3" id="tres32">
+                    <label for="tres32" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress32" value="0.4" id="cuatro32">
+                    <label for="cuatro32" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress32" value="0.5" id="cinco32">
+                    <label for="cinco32" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress32" value="0.6" id="seis32">
+                    <label for="seis32" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress32" value="0.7" id="siete32">
+                    <label for="siete32" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress32" value="0.8" id="ocho32">
+                    <label for="ocho32" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress32" value="0.9" id="nueve32">
+                    <label for="nueve32" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress32" value="1.0" id="diez32">
+                    <label for="diez32" class="label">10</label>
+            
+                    <div class="progress32">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">33.-¿Estreñimiento? </label>
+                <select id='select33' name="respuesta33" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="estreñimiento">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container33" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress33" value="0" id="cero33" checked>
+
+                    <input type="radio" class="radio" name="progress33" value="0.1" id="uno33">
+                    <label for="uno33" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress33" value="0.2" id="dos33">
+                    <label for="dos33" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress33" value="0.3" id="tres33">
+                    <label for="tres33" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress33" value="0.4" id="cuatro33">
+                    <label for="cuatro33" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress33" value="0.5" id="cinco33">
+                    <label for="cinco33" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress33" value="0.6" id="seis33">
+                    <label for="seis33" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress33" value="0.7" id="siete33">
+                    <label for="siete33" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress33" value="0.8" id="ocho33">
+                    <label for="ocho33" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress33" value="0.9" id="nueve33">
+                    <label for="nueve33" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress33" value="1.0" id="diez33">
+                    <label for="diez33" class="label">10</label>
+            
+                    <div class="progress33">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">34.-¿Cuenta con fiebre? </label>
+                <select id='select34' name="respuesta34" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="fiebre">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container34" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress34" value="0" id="cero34" checked>
+
+                    <input type="radio" class="radio" name="progress34" value="0.1" id="uno34">
+                    <label for="uno34" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress34" value="0.2" id="dos34">
+                    <label for="dos34" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress34" value="0.3" id="tres34">
+                    <label for="tres34" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress34" value="0.4" id="cuatro34">
+                    <label for="cuatro34" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress34" value="0.5" id="cinco34">
+                    <label for="cinco34" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress34" value="0.6" id="seis34">
+                    <label for="seis34" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress34" value="0.7" id="siete34">
+                    <label for="siete34" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress34" value="0.8" id="ocho34">
+                    <label for="ocho34" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress34" value="0.9" id="nueve34">
+                    <label for="nueve34" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress34" value="1.0" id="diez34">
+                    <label for="diez34" class="label">10</label>
+            
+                    <div class="progress34">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+                <label for="start">35.-¿Cuenta con deshidratación? </label>
+                <select id='select35' name="respuesta35" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="deshidratacion">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container35" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress35" value="0" id="cero35" checked>
+
+                    <input type="radio" class="radio" name="progress35" value="0.1" id="uno35">
+                    <label for="uno35" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress35" value="0.2" id="dos35">
+                    <label for="dos35" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress35" value="0.3" id="tres35">
+                    <label for="tres35" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress35" value="0.4" id="cuatro35">
+                    <label for="cuatro35" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress35" value="0.5" id="cinco35">
+                    <label for="cinco35" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress35" value="0.6" id="seis35">
+                    <label for="seis35" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress35" value="0.7" id="siete35">
+                    <label for="siete35" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress35" value="0.8" id="ocho35">
+                    <label for="ocho35" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress35" value="0.9" id="nueve35">
+                    <label for="nueve35" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress35" value="1.0" id="diez35">
+                    <label for="diez35" class="label">10</label>
+            
+                    <div class="progress35">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">36.-¿Dolor al toser? </label>
+                <select id='select36' name="respuesta36" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor al toser">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container36" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress36" value="0" id="cero36" checked>
+
+                    <input type="radio" class="radio" name="progress36" value="0.1" id="uno36">
+                    <label for="uno36" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress36" value="0.2" id="dos36">
+                    <label for="dos36" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress36" value="0.3" id="tres36">
+                    <label for="tres36" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress36" value="0.4" id="cuatro36">
+                    <label for="cuatro36" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress36" value="0.5" id="cinco36">
+                    <label for="cinco36" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress36" value="0.6" id="seis36">
+                    <label for="seis36" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress36" value="0.7" id="siete36">
+                    <label for="siete36" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress36" value="0.8" id="ocho36">
+                    <label for="ocho36" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress36" value="0.9" id="nueve36">
+                    <label for="nueve36" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress36" value="1.0" id="diez36">
+                    <label for="diez36" class="label">10</label>
+            
+                    <div class="progress36">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">37.-¿Dolor al inclinarse? </label>
+                <select id='select37' name="respuesta37" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor al inclinarse">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container37" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress37" value="0" id="cero37" checked>
+
+                    <input type="radio" class="radio" name="progress37" value="0.1" id="uno37">
+                    <label for="uno37" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress37" value="0.2" id="dos37">
+                    <label for="dos37" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress37" value="0.3" id="tres37">
+                    <label for="tres37" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress37" value="0.4" id="cuatro37">
+                    <label for="cuatro37" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress37" value="0.5" id="cinco37">
+                    <label for="cinco37" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress37" value="0.6" id="seis37">
+                    <label for="seis37" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress37" value="0.7" id="siete37">
+                    <label for="siete37" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress37" value="0.8" id="ocho37">
+                    <label for="ocho37" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress37" value="0.9" id="nueve37">
+                    <label for="nueve37" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress37" value="1.0" id="diez37">
+                    <label for="diez37" class="label">10</label>
+            
+                    <div class="progress37">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">38.-¿Dolor al levantar objetos pesados.? </label>
+                <select id='select38' name="respuesta38" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor al levantar objetos pesados">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container38" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress38" value="0" id="cero38" checked>
+
+                    <input type="radio" class="radio" name="progress38" value="0.1" id="uno38">
+                    <label for="uno38" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress38" value="0.2" id="dos38">
+                    <label for="dos38" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress38" value="0.3" id="tres38">
+                    <label for="tres38" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress38" value="0.4" id="cuatro38">
+                    <label for="cuatro38" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress38" value="0.5" id="cinco38">
+                    <label for="cinco38" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress38" value="0.6" id="seis38">
+                    <label for="seis38" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress38" value="0.7" id="siete38">
+                    <label for="siete38" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress38" value="0.8" id="ocho38">
+                    <label for="ocho38" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress38" value="0.9" id="nueve38">
+                    <label for="nueve38" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress38" value="1.0" id="diez38">
+                    <label for="diez38" class="label">10</label>
+            
+                    <div class="progress38">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">39.-¿Dolor abdominal del lado derecho? </label>
+                <select id='select39' name="respuesta39" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor abdominal lado derecho">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container39" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress39" value="0" id="cero39" checked>
+
+                    <input type="radio" class="radio" name="progress39" value="0.1" id="uno39">
+                    <label for="uno39" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress39" value="0.2" id="dos39">
+                    <label for="dos39" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress39" value="0.3" id="tres39">
+                    <label for="tres39" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress39" value="0.4" id="cuatro39">
+                    <label for="cuatro39" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress39" value="0.5" id="cinco39">
+                    <label for="cinco39" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress39" value="0.6" id="seis39">
+                    <label for="seis39" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress39" value="0.7" id="siete39">
+                    <label for="siete39" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress39" value="0.8" id="ocho39">
+                    <label for="ocho39" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress39" value="0.9" id="nueve39">
+                    <label for="nueve39" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress39" value="1.0" id="diez39">
+                    <label for="diez39" class="label">10</label>
+            
+                    <div class="progress39">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">40.-¿Bulto cerca del ano? </label>
+                <select id='select40' name="respuesta40" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="bulto cerca del ano">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container40" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress40" value="0" id="cero40" checked>
+
+                    <input type="radio" class="radio" name="progress40" value="0.1" id="uno40">
+                    <label for="uno40" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress40" value="0.2" id="dos40">
+                    <label for="dos40" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress40" value="0.3" id="tres40">
+                    <label for="tres40" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress40" value="0.4" id="cuatro40">
+                    <label for="cuatro40" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress40" value="0.5" id="cinco40">
+                    <label for="cinco40" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress40" value="0.6" id="seis40">
+                    <label for="seis40" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress40" value="0.7" id="siete40">
+                    <label for="siete40" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress40" value="0.8" id="ocho40">
+                    <label for="ocho40" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress40" value="0.9" id="nueve40">
+                    <label for="nueve40" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress40" value="1.0" id="diez40">
+                    <label for="diez40" class="label">10</label>
+            
+                    <div class="progress40">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">41.-¿Dolor anal? </label>
+                <select id='select41' name="respuesta41" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="dolor anal">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container41" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress41" value="0" id="cero41" checked>
+
+                    <input type="radio" class="radio" name="progress41" value="0.1" id="uno41">
+                    <label for="uno41" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress41" value="0.2" id="dos41">
+                    <label for="dos1" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress41" value="0.3" id="tres41">
+                    <label for="tres41" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress41" value="0.4" id="cuatro41">
+                    <label for="cuatro41" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress41" value="0.5" id="cinco41">
+                    <label for="cinco41" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress41" value="0.6" id="seis41">
+                    <label for="seis41" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress41" value="0.7" id="siete41">
+                    <label for="siete41" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress41" value="0.8" id="ocho41">
+                    <label for="ocho41" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress41" value="0.9" id="nueve41">
+                    <label for="nueve41" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress41" value="1.0" id="diez41">
+                    <label for="diez41" class="label">10</label>
+            
+                    <div class="progress41">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+
+                <label for="start">42.-¿Irritabilidad cerca del ano? </label>
+                <select id='select42' name="respuesta42" onclick="funcion()">
+                    <option value="null">Selecciona una opción</option>
+                    <option value="irritabilidad cerca del ano">Sí</option>
+                    <option value="null">No</option>
+                </select>
+                <div class="container42" style='display: none;' id="container">
+                    <input type="radio" class="radio" name="progress42" value="0" id="cero42" checked>
+
+                    <input type="radio" class="radio" name="progress42" value="0.1" id="uno42">
+                    <label for="uno42" class="label">1</label>
+            
+                    <input type="radio" class="radio" name="progress42" value="0.2" id="dos42">
+                    <label for="dos42" class="label">2</label>
+            
+                    <input type="radio" class="radio" name="progress42" value="0.3" id="tres42">
+                    <label for="tres42" class="label">3</label>
+            
+                    <input type="radio" class="radio" name="progress42" value="0.4" id="cuatro42">
+                    <label for="cuatro42" class="label">4</label>
+            
+                    <input type="radio" class="radio" name="progress42" value="0.5" id="cinco42">
+                    <label for="cinco42" class="label">5</label>
+
+                    <input type="radio" class="radio" name="progress42" value="0.6" id="seis42">
+                    <label for="seis42" class="label">6</label>
+
+                    <input type="radio" class="radio" name="progress42" value="0.7" id="siete42">
+                    <label for="siete42" class="label">7</label>
+
+                    <input type="radio" class="radio" name="progress42" value="0.8" id="ocho42">
+                    <label for="ocho42" class="label">8</label>
+
+                    <input type="radio" class="radio" name="progress42" value="0.9" id="nueve42">
+                    <label for="nueve42" class="label">9</label>
+
+                    <input type="radio" class="radio" name="progress42" value="1.0" id="diez42">
+                    <label for="diez42" class="label">10</label>
+            
+                    <div class="progress42">
+                        <div class="progress-bar"></div>
+                    </div>
+            
+                </div>
+                <br>
+            </div>
+            <div class="mover-boton-2">
+                <input type="submit" id="boton-3" value="Enviar Respuestas">
+            </div>
+        </form>
+
+    </div>
+
+    <footer>
+        <div class="texto-footer">
+            <h3>Inteligencia Artificial <br> Facultad de Informática <br> 2021 </h3>
+        </div>
+    </footer>
+
+    
+
+
+
+    <script>
+    function funcion() {
+        var contador = 0;
+        for (var i=0;i < document.forms["sintomas-form"].elements.length;i++) {
+            inpt = document.forms[0].elements[i];
+            if (inpt.checked && inpt.value != 0) {
+                contador++;
+                console.log(contador)
+            }
+        }
+        if(contador >= 8) {
+            alert('Recuerda no seleccionar mas de ocho sintomas');
+            return false;
+        }
+    }
+
+
+
+        //LLamar a la barra de progreso
+        var progressBar1 = document.getElementsByClassName('container1');
+        //Llamar al select que abre el modal
+        var optionValue1 = document.getElementById('select1');
+        
+        var x1 = document.getElementById('select1').options;
+        
+        //Cuando option = true se muestra la barra de progreso
+        optionValue1.addEventListener('change', function () {
+            console.log(x1.selectedIndex);
+            if (x1.selectedIndex == 1) {
+                progressBar1[0].style.display = 'block';
+            } else {
+                progressBar1[0].style.display = 'none';
+            }
+        });
+
+        
+        var progressBar2 = document.getElementsByClassName('container2');
+        
+        var optionValue2 = document.getElementById('select2');
+        
+        var x2 = document.getElementById('select2').options;
+
+        optionValue2.addEventListener('change', function () {
+            console.log(x2.selectedIndex);
+            if (x2.selectedIndex == 1) {
+                progressBar2[0].style.display = 'block';
+            } else {
+                progressBar2[0].style.display = 'none';
+            }
+        });
+
+            
+        var progressBar3 = document.getElementsByClassName('container3');
+        
+        var optionValue3 = document.getElementById('select3');
+        
+        var x3 = document.getElementById('select3').options;
+
+        optionValue3.addEventListener('change', function () {
+            console.log(x3.selectedIndex);
+            if (x3.selectedIndex == 1) {
+                progressBar3[0].style.display = 'block';
+            } else {
+                progressBar3[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar4 = document.getElementsByClassName('container4');
+        
+        var optionValue4 = document.getElementById('select4');
+        
+        var x4 = document.getElementById('select4').options;
+
+        optionValue4.addEventListener('change', function () {
+            console.log(x4.selectedIndex);
+            if (x4.selectedIndex == 1) {
+                progressBar4[0].style.display = 'block';
+            } else {
+                progressBar4[0].style.display = 'none';
+            }
+        });
+           
+        var progressBar5 = document.getElementsByClassName('container5');
+        
+        var optionValue5 = document.getElementById('select5');
+        
+        var x5 = document.getElementById('select5').options;
+
+        optionValue5.addEventListener('change', function () {
+            console.log(x5.selectedIndex);
+            if (x5.selectedIndex == 1) {
+                progressBar5[0].style.display = 'block';
+            } else {
+                progressBar5[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar6 = document.getElementsByClassName('container6');
+        
+        var optionValue6 = document.getElementById('select6');
+        
+        var x6 = document.getElementById('select6').options;
+
+        optionValue6.addEventListener('change', function () {
+            console.log(x6.selectedIndex);
+            if (x6.selectedIndex == 1) {
+                progressBar6[0].style.display = 'block';
+            } else {
+                progressBar6[0].style.display = 'none';
+            }
+        });
+
+            
+        var progressBar7 = document.getElementsByClassName('container7');
+        
+        var optionValue7 = document.getElementById('select7');
+        
+        var x7 = document.getElementById('select7').options;
+
+        optionValue7.addEventListener('change', function () {
+            console.log(x7.selectedIndex);
+            if (x7.selectedIndex == 1) {
+                progressBar7[0].style.display = 'block';
+            } else {
+                progressBar7[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar8 = document.getElementsByClassName('container8');
+        
+        var optionValue8 = document.getElementById('select8');
+        
+        var x8 = document.getElementById('select8').options;
+
+        optionValue8.addEventListener('change', function () {
+            console.log(x8.selectedIndex);
+            if (x8.selectedIndex == 1) {
+                progressBar8[0].style.display = 'block';
+            } else {
+                progressBar8[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar9 = document.getElementsByClassName('container9');
+        
+        var optionValue9 = document.getElementById('select9');
+        
+        var x9 = document.getElementById('select9').options;
+
+        optionValue9.addEventListener('change', function () {
+            console.log(x9.selectedIndex);
+            if (x9.selectedIndex == 1) {
+                progressBar9[0].style.display = 'block';
+            } else {
+                progressBar9[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar10 = document.getElementsByClassName('container10');
+        
+        var optionValue10 = document.getElementById('select10');
+        
+        var x10 = document.getElementById('select10').options;
+
+        optionValue10.addEventListener('change', function () {
+            console.log(x10.selectedIndex);
+            if (x10.selectedIndex == 1) {
+                progressBar10[0].style.display = 'block';
+            } else {
+                progressBar10[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar11 = document.getElementsByClassName('container11');
+        
+        var optionValue11 = document.getElementById('select11');
+        
+        var x11 = document.getElementById('select11').options;
+
+        optionValue11.addEventListener('change', function () {
+            console.log(x11.selectedIndex);
+            if (x11.selectedIndex == 1) {
+                progressBar11[0].style.display = 'block';
+            } else {
+                progressBar11[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar12 = document.getElementsByClassName('container12');
+        
+        var optionValue12 = document.getElementById('select12');
+        
+        var x12 = document.getElementById('select12').options;
+
+        optionValue12.addEventListener('change', function () {
+            console.log(x12.selectedIndex);
+            if (x12.selectedIndex == 1) {
+                progressBar12[0].style.display = 'block';
+            } else {
+                progressBar12[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar13 = document.getElementsByClassName('container13');
+        
+        var optionValue13 = document.getElementById('select13');
+        
+        var x13 = document.getElementById('select13').options;
+
+        optionValue13.addEventListener('change', function () {
+            console.log(x13.selectedIndex);
+            if (x13.selectedIndex == 1) {
+                progressBar13[0].style.display = 'block';
+            } else {
+                progressBar13[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar14 = document.getElementsByClassName('container14');
+        
+        var optionValue14 = document.getElementById('select14');
+        
+        var x14 = document.getElementById('select14').options;
+
+        optionValue14.addEventListener('change', function () {
+            console.log(x14.selectedIndex);
+            if (x14.selectedIndex == 1) {
+                progressBar14[0].style.display = 'block';
+            } else {
+                progressBar14[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar15 = document.getElementsByClassName('container15');
+        
+        var optionValue15 = document.getElementById('select15');
+        
+        var x15 = document.getElementById('select15').options;
+
+        optionValue15.addEventListener('change', function () {
+            console.log(x15.selectedIndex);
+            if (x15.selectedIndex == 1) {
+                progressBar15[0].style.display = 'block';
+            } else {
+                progressBar15[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar16 = document.getElementsByClassName('container16');
+        
+        var optionValue16 = document.getElementById('select16');
+        
+        var x16 = document.getElementById('select16').options;
+
+        optionValue16.addEventListener('change', function () {
+            console.log(x16.selectedIndex);
+            if (x16.selectedIndex == 1) {
+                progressBar16[0].style.display = 'block';
+            } else {
+                progressBar16[0].style.display = 'none';
+            }
+        });
+            
+        var progressBar17 = document.getElementsByClassName('container17');
+        
+        var optionValue17 = document.getElementById('select17');
+        
+        var x17 = document.getElementById('select17').options;
+
+        optionValue17.addEventListener('change', function () {
+            console.log(x17.selectedIndex);
+            if (x17.selectedIndex == 1) {
+                progressBar17[0].style.display = 'block';
+            } else {
+                progressBar17[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar18 = document.getElementsByClassName('container18');
+        
+        var optionValue18 = document.getElementById('select18');
+        
+        var x18 = document.getElementById('select18').options;
+
+        optionValue18.addEventListener('change', function () {
+            console.log(x18.selectedIndex);
+            if (x18.selectedIndex == 1) {
+                progressBar18[0].style.display = 'block';
+            } else {
+                progressBar18[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar19 = document.getElementsByClassName('container19');
+        
+        var optionValue19 = document.getElementById('select19');
+        
+        var x19 = document.getElementById('select19').options;
+
+        optionValue19.addEventListener('change', function () {
+            console.log(x19.selectedIndex);
+            if (x19.selectedIndex == 1) {
+                progressBar19[0].style.display = 'block';
+            } else {
+                progressBar19[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar20 = document.getElementsByClassName('container20');
+        
+        var optionValue20 = document.getElementById('select20');
+        
+        var x20 = document.getElementById('select20').options;
+
+        optionValue20.addEventListener('change', function () {
+            console.log(x20.selectedIndex);
+            if (x20.selectedIndex == 1) {
+                progressBar20[0].style.display = 'block';
+            } else {
+                progressBar20[0].style.display = 'none';
+            }
+        });
+
+            
+        var progressBar21 = document.getElementsByClassName('container21');
+        
+        var optionValue21 = document.getElementById('select21');
+        
+        var x21 = document.getElementById('select21').options;
+
+        optionValue21.addEventListener('change', function () {
+            console.log(x21.selectedIndex);
+            if (x21.selectedIndex == 1) {
+                progressBar21[0].style.display = 'block';
+            } else {
+                progressBar21[0].style.display = 'none';
+            }
+        });
+            
+        var progressBar22 = document.getElementsByClassName('container22');
+        
+        var optionValue22 = document.getElementById('select22');
+        
+        var x22 = document.getElementById('select22').options;
+
+        optionValue22.addEventListener('change', function () {
+            console.log(x22.selectedIndex);
+            if (x22.selectedIndex == 1) {
+                progressBar22[0].style.display = 'block';
+            } else {
+                progressBar22[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar23 = document.getElementsByClassName('container23');
+        
+        var optionValue23 = document.getElementById('select23');
+        
+        var x23 = document.getElementById('select23').options;
+
+        optionValue23.addEventListener('change', function () {
+            console.log(x23.selectedIndex);
+            if (x23.selectedIndex == 1) {
+                progressBar23[0].style.display = 'block';
+            } else {
+                progressBar23[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar24 = document.getElementsByClassName('container24');
+        
+        var optionValue24 = document.getElementById('select24');
+        
+        var x24 = document.getElementById('select24').options;
+
+        optionValue24.addEventListener('change', function () {
+            console.log(x24.selectedIndex);
+            if (x24.selectedIndex == 1) {
+                progressBar24[0].style.display = 'block';
+            } else {
+                progressBar24[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar25 = document.getElementsByClassName('container25');
+        
+        var optionValue25 = document.getElementById('select25');
+        
+        var x25 = document.getElementById('select25').options;
+
+        optionValue25.addEventListener('change', function () {
+            console.log(x25.selectedIndex);
+            if (x25.selectedIndex == 1) {
+                progressBar25[0].style.display = 'block';
+            } else {
+                progressBar25[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar26 = document.getElementsByClassName('container26');
+        
+        var optionValue26 = document.getElementById('select26');
+        
+        var x26 = document.getElementById('select26').options;
+
+        optionValue26.addEventListener('change', function () {
+            console.log(x26.selectedIndex);
+            if (x26.selectedIndex == 1) {
+                progressBar26[0].style.display = 'block';
+            } else {
+                progressBar26[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar27 = document.getElementsByClassName('container27');
+        
+        var optionValue27 = document.getElementById('select27');
+        
+        var x27 = document.getElementById('select27').options;
+
+        optionValue27.addEventListener('change', function () {
+            console.log(x27.selectedIndex);
+            if (x27.selectedIndex == 1) {
+                progressBar27[0].style.display = 'block';
+            } else {
+                progressBar27[0].style.display = 'none';
+            }
+        });
+
+            
+        var progressBar28 = document.getElementsByClassName('container28');
+        
+        var optionValue28 = document.getElementById('select28');
+        
+        var x28 = document.getElementById('select28').options;
+
+        optionValue28.addEventListener('change', function () {
+            console.log(x28.selectedIndex);
+            if (x28.selectedIndex == 1) {
+                progressBar28[0].style.display = 'block';
+            } else {
+                progressBar28[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar29 = document.getElementsByClassName('container29');
+        
+        var optionValue29 = document.getElementById('select29');
+        
+        var x29 = document.getElementById('select29').options;
+
+        optionValue29.addEventListener('change', function () {
+            console.log(x29.selectedIndex);
+            if (x29.selectedIndex == 1) {
+                progressBar29[0].style.display = 'block';
+            } else {
+                progressBar29[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar30 = document.getElementsByClassName('container30');
+        
+        var optionValue30 = document.getElementById('select30');
+        
+        var x30 = document.getElementById('select30').options;
+
+        optionValue30.addEventListener('change', function () {
+            console.log(x30.selectedIndex);
+            if (x30.selectedIndex == 1) {
+                progressBar30[0].style.display = 'block';
+            } else {
+                progressBar30[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar31 = document.getElementsByClassName('container31');
+        
+        var optionValue31 = document.getElementById('select31');
+        
+        var x31 = document.getElementById('select31').options;
+
+        optionValue31.addEventListener('change', function () {
+            console.log(x31.selectedIndex);
+            if (x31.selectedIndex == 1) {
+                progressBar31[0].style.display = 'block';
+            } else {
+                progressBar31[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar32 = document.getElementsByClassName('container32');
+        
+        var optionValue32 = document.getElementById('select32');
+        
+        var x32 = document.getElementById('select32').options;
+
+        optionValue32.addEventListener('change', function () {
+            console.log(x32.selectedIndex);
+            if (x32.selectedIndex == 1) {
+                progressBar32[0].style.display = 'block';
+            } else {
+                progressBar32[0].style.display = 'none';
+            }
+        });
+            
+        var progressBar33 = document.getElementsByClassName('container33');
+        
+        var optionValue33 = document.getElementById('select33');
+        
+        var x33 = document.getElementById('select33').options;
+
+        optionValue33.addEventListener('change', function () {
+            console.log(x33.selectedIndex);
+            if (x33.selectedIndex == 1) {
+                progressBar33[0].style.display = 'block';
+            } else {
+                progressBar33[0].style.display = 'none';
+            }
+        });
+
+            
+        var progressBar34 = document.getElementsByClassName('container34');
+        
+        var optionValue34 = document.getElementById('select34');
+        
+        var x34 = document.getElementById('select34').options;
+
+        optionValue34.addEventListener('change', function () {
+            console.log(x34.selectedIndex);
+            if (x34.selectedIndex == 1) {
+                progressBar34[0].style.display = 'block';
+            } else {
+                progressBar34[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar35 = document.getElementsByClassName('container35');
+        
+        var optionValue35 = document.getElementById('select35');
+        
+        var x35 = document.getElementById('select35').options;
+
+        optionValue35.addEventListener('change', function () {
+            console.log(x35.selectedIndex);
+            if (x35.selectedIndex == 1) {
+                progressBar35[0].style.display = 'block';
+            } else {
+                progressBar35[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar36 = document.getElementsByClassName('container36');
+        
+        var optionValue36 = document.getElementById('select36');
+        
+        var x36 = document.getElementById('select36').options;
+
+        optionValue36.addEventListener('change', function () {
+            console.log(x36.selectedIndex);
+            if (x36.selectedIndex == 1) {
+                progressBar36[0].style.display = 'block';
+            } else {
+                progressBar36[0].style.display = 'none';
+            }
+        });
+            
+        var progressBar37 = document.getElementsByClassName('container37');
+        
+        var optionValue37 = document.getElementById('select37');
+        
+        var x37 = document.getElementById('select37').options;
+
+        optionValue37.addEventListener('change', function () {
+            console.log(x37.selectedIndex);
+            if (x37.selectedIndex == 1) {
+                progressBar37[0].style.display = 'block';
+            } else {
+                progressBar37[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar38 = document.getElementsByClassName('container38');
+        
+        var optionValue38 = document.getElementById('select38');
+        
+        var x38 = document.getElementById('select38').options;
+
+        optionValue38.addEventListener('change', function () {
+            console.log(x38.selectedIndex);
+            if (x38.selectedIndex == 1) {
+                progressBar38[0].style.display = 'block';
+            } else {
+                progressBar38[0].style.display = 'none';
+            }
+        });
+
+            
+        var progressBar39 = document.getElementsByClassName('container39');
+        
+        var optionValue39 = document.getElementById('select39');
+        
+        var x39 = document.getElementById('select39').options;
+
+        optionValue39.addEventListener('change', function () {
+            console.log(x39.selectedIndex);
+            if (x39.selectedIndex == 1) {
+                progressBar39[0].style.display = 'block';
+            } else {
+                progressBar39[0].style.display = 'none';
+            }
+        });
+    
+            
+        var progressBar40 = document.getElementsByClassName('container40');
+        
+        var optionValue40 = document.getElementById('select40');
+        
+        var x40 = document.getElementById('select40').options;
+
+        optionValue40.addEventListener('change', function () {
+            console.log(x40.selectedIndex);
+            if (x40.selectedIndex == 1) {
+                progressBar40[0].style.display = 'block';
+            } else {
+                progressBar40[0].style.display = 'none';
+            }
+        });
+        
+            
+        var progressBar41 = document.getElementsByClassName('container41');
+        
+        var optionValue41 = document.getElementById('select41');
+        
+        var x41 = document.getElementById('select41').options;
+
+        optionValue41.addEventListener('change', function () {
+            console.log(x41.selectedIndex);
+            if (x41.selectedIndex == 1) {
+                progressBar41[0].style.display = 'block';
+            } else {
+                progressBar41[0].style.display = 'none';
+            }
+        });
+             
+        var progressBar42 = document.getElementsByClassName('container42');
+        
+        var optionValue42 = document.getElementById('select42');
+        
+        var x42 = document.getElementById('select42').options;
+
+        optionValue42.addEventListener('change', function () {
+            console.log(x42.selectedIndex);
+            if (x42.selectedIndex == 1) {
+                progressBar42[0].style.display = 'block';
+            } else {
+                progressBar42[0].style.display = 'none';
+            }
+        });
+    
+    
+    
+    </script>
+</body>
+
+</html>

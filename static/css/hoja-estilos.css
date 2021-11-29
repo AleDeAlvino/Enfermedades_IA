@@ -1,0 +1,2642 @@
+/** Pantalla de bienvenida**/
+*{
+    margin: 0;
+}
+/**Primera sección de la pantalla**/
+#fondo1{
+    display: flex;
+    width: 100%;
+}
+.diagnostico-de-enfermedades{
+    font-size: 250%;
+    padding-top: 16%;
+    padding-right: 50%;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Heebo', sans-serif;
+}
+.diagnostico-de-enfermedades-2{
+    font-size: 250%;
+    padding-top: 21%;
+    padding-right: 50%;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Heebo', sans-serif;
+}
+.digestivas{
+    font-size: 180%;
+    padding-top: 27%;
+    padding-right: 50%;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+}
+.aplicando-logica-difusa{
+    font-size: 130%;
+    padding-top: 31%;
+    padding-right: 50%;
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+}
+.boton_mover{
+    position: absolute;
+    padding-top:37%;
+    left: 10%; 
+}
+#botton-comenzar{
+    border:2px solid #E2CDBA;
+    border-radius: 20px;
+    background: #E2CDBA;
+    padding: 11px 50px;
+    color: white;
+    font-family: 'Zen Maru Gothic', sans-serif;
+
+}
+/**Segunda sección de la pantalla**/
+#fondo2{
+    display: flex;
+    width: 100%;
+    height: 350px;
+}
+.caja-de-informacion{
+    background-color: #DDB4BA;
+}
+#caduceo-img{
+    width: 80px;
+    height:80px;
+    padding-top: 4%;
+    padding-left: 47%;
+}
+.pregunta{
+    color: white;
+    text-align: center;
+    padding-top:1%;
+    font-size:200%;
+    font-family: 'Heebo', sans-serif;
+}
+.texto-1{
+    font-size: 110%;
+    padding-left: 5%;
+    margin-top: 8%;
+    padding-bottom: 4%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+#tachuela-1{
+    width: 3%;
+    height: 3%;
+    padding-left: 10%;
+    margin-bottom: -5%;
+}
+.texto-2{
+    font-size: 110%;
+    padding-left: 34%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -11%;
+    position: relative;
+    padding-bottom: 4%;
+}
+#tachuela-2{
+    width: 3%;
+    height: 3%;
+    padding-left: 30%;
+    margin-bottom: -5%;
+}
+.texto-3{
+    color: #ffffff;
+    padding-left: 71%;
+    margin-top: -12%;
+    font-size: 110%;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 4%;
+}
+#tachuela-3{
+    width: 3%;
+    height: 3%;
+    padding-left: 32%;
+    margin-bottom: -5%;
+}
+/**Tercera sección de la pantalla**/
+#fondo3{
+    display: flex;
+    width: 100%;
+}
+
+.pregunta-2{
+    margin-left: 45%;
+    margin-top: -46%;
+    color: rgb(255, 255, 255);
+    font-size:140%;
+    font-family: 'Heebo', sans-serif;
+}
+#tachuela-4{
+    width: 3%;
+    height: 3%;
+    margin-left:65%;
+    margin-top: 5%;
+}
+.texto-4{
+    padding-left: 51%;
+    margin-top: 1.5%;
+    color: #ffffff;
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+#tachuela-5{
+    width: 3%;
+    height: 3%;
+    margin-left:65%;
+    margin-top: 2%;
+}
+.texto-5{
+    padding-left: 51%;
+    margin-top: 1.5%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+/*------------FOOTER----------------------*/
+footer{
+    text-align: center;
+    margin-top: 8.4%;
+    background: #BEB8BC;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80%;
+}
+.texto-footer{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+/**Pagina de preguntas para el usuario ***/
+.pantalla-dos{
+    background: #DDB4BA;
+}
+#pantalla-2-2{
+    align-items: center;
+}
+#fondo3{
+    height: 250px;
+}
+.cuadro-de-preguntas{
+    width: 55%;
+    background: #F8EAEA;
+    margin-top:2.5%;
+    margin-left: 23%;
+    margin-right: 25%;
+    margin-bottom: -6%;
+}
+h2{
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+h4{
+    text-align: center; 
+    padding-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+label {
+    display: flex;
+    font-family: 'Heebo', sans-serif;
+    color: black;
+}
+select{
+    font-family: 'Montserrat', sans-serif;
+    margin-left:16px;
+    background-color: #eed2cc;
+    border-color: #eed2cc ;
+    line-height: 2.3em;
+    padding: .4em 1.4em .3em .2em;
+    width: 400px;
+    color: #000000;
+}
+option{
+    margin-left:16px;
+    color: #000000;
+    line-height:2.5em;
+}
+.mover-preguntas{
+    padding-left: 27%;
+}
+.mover-boton-2{
+    padding-top: 3%;
+    padding-bottom: 4%;
+    padding-left: 40%;
+}
+#boton-3{
+    border:2px solid #E2CDBA;
+    border-radius: 20px;
+    background: #E2CDBA;
+    padding: 11px 50px;
+    color: white;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/***-----------------------------------------------------------------------------**/
+body {
+    color: #bbb8b2;
+    background: #2e2e3a;
+  }
+  
+  #container {
+    margin: 200px auto;
+    width: 400px;
+    text-align: center;
+    padding-right: 30%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  
+  #container .progress1 {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  .radio {
+    display: none;
+  }
+  
+  .label {
+    display: inline-block;
+    margin: 0 5px 20px;
+    padding: 3px 8px;
+    color: #aaa;
+    text-shadow: 0 1px black;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .radio:checked + .label {
+    color: white;
+    background: rgba(0, 0, 0, 0.25);
+  }
+  
+  .progress-bar {
+    height: 24px;
+    border-radius: 4px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* A partir de aqui van las barras */
+
+  .progress1 {
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  
+  #uno1:checked ~ .progress1 > .progress-bar {
+    width: 10%;
+    background-color: #ff0000;
+  }
+  
+  #dos1:checked ~ .progress1 > .progress-bar {
+    width: 20%;
+    background-color: #ff5100;
+  }
+  
+  #tres1:checked ~ .progress1 > .progress-bar {
+    width: 30%;
+    background-color: #f27d1e;
+  }
+  
+  #cuatro1:checked ~ .progress1 > .progress-bar {
+    width: 40%;
+    background-color: #ffd900;
+  }
+  
+  #cinco1:checked ~ .progress1 > .progress-bar {
+    width: 50%;
+    background-color: #cde01e;
+  }
+
+  #seis1:checked ~ .progress1 > .progress-bar {
+    width: 60%;
+    background-color: #a6e01e;
+  }
+
+  #siete1:checked ~ .progress1 > .progress-bar {
+    width: 70%;
+    background-color: #89ff02;
+  }
+
+  #ocho1:checked ~ .progress1 > .progress-bar {
+    width: 80%;
+    background-color: #75d804;
+  }
+
+  #nueve1:checked ~ .progress1 > .progress-bar {
+    width: 90%;
+    background-color: #5aa504;
+  }
+
+  #diez1:checked ~ .progress1 > .progress-bar {
+    width: 100%;
+    background-color: #3a571a;
+  }
+
+  .progress2 {
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  
+  #uno2:checked ~ .progress2 > .progress-bar {
+    width: 10%;
+    background-color: #ff0000;
+  }
+  
+  #dos2:checked ~ .progress2 > .progress-bar {
+    width: 20%;
+    background-color: #ff5100;
+  }
+  
+  #tres2:checked ~ .progress2 > .progress-bar {
+    width: 30%;
+    background-color: #f27d1e;
+  }
+  
+  #cuatro2:checked ~ .progress2 > .progress-bar {
+    width: 40%;
+    background-color: #ffd900;
+  }
+  
+  #cinco2:checked ~ .progress2 > .progress-bar {
+    width: 50%;
+    background-color: #cde01e;
+  }
+
+  #seis2:checked ~ .progress2> .progress-bar {
+    width: 60%;
+    background-color: #a6e01e;
+  }
+
+  #siete2:checked ~ .progress2 > .progress-bar {
+    width: 70%;
+    background-color: #89ff02;
+  }
+
+  #ocho2:checked ~ .progress2 > .progress-bar {
+    width: 80%;
+    background-color: #75d804;
+  }
+
+  #nueve2:checked ~ .progress2 > .progress-bar {
+    width: 90%;
+    background-color: #5aa504;
+  }
+
+  #diez2:checked ~ .progress2 > .progress-bar {
+    width: 100%;
+    background-color: #3a571a;
+  }
+
+    .progress3 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno3:checked ~ .progress3 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+    
+    #dos3:checked ~ .progress3 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres3:checked ~ .progress3 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro3:checked ~ .progress3 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco3:checked ~ .progress3 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis3:checked ~ .progress3 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete3:checked ~ .progress3 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho3:checked ~ .progress3 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve3:checked ~ .progress3 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez3:checked ~ .progress3 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress4 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno4:checked ~ .progress4 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos4:checked ~ .progress4 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres4:checked ~ .progress4 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro4:checked ~ .progress4 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco4:checked ~ .progress4 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis4:checked ~ .progress4 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete4:checked ~ .progress4 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho4:checked ~ .progress4 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve4:checked ~ .progress4 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez4:checked ~ .progress4 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress5 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno5:checked ~ .progress5 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos5:checked ~ .progress5 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres5:checked ~ .progress5 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro5:checked ~ .progress5 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco5:checked ~ .progress5 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis5:checked ~ .progress5 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete5:checked ~ .progress5 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho5:checked ~ .progress5 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve5:checked ~ .progress5 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez5:checked ~ .progress5 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress6 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno6:checked ~ .progress6 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos6:checked ~ .progress6 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres6:checked ~ .progress6 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro6:checked ~ .progress6 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco6:checked ~ .progress6 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis6:checked ~ .progress6 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete6:checked ~ .progress6 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho6:checked ~ .progress6 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve6:checked ~ .progress6 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez6:checked ~ .progress6 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress7 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno7:checked ~ .progress7 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos7:checked ~ .progress7 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres7:checked ~ .progress7 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro7:checked ~ .progress7 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco7:checked ~ .progress7 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis7:checked ~ .progress7 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete7:checked ~ .progress7 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho7:checked ~ .progress7 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve7:checked ~ .progress7 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez7:checked ~ .progress7 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress8 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno8:checked ~ .progress8 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos8:checked ~ .progress8 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres8:checked ~ .progress8 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro8:checked ~ .progress8 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco8:checked ~ .progress8 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis8:checked ~ .progress8 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete8:checked ~ .progress8 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho8:checked ~ .progress8 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve8:checked ~ .progress8 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez8:checked ~ .progress8 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress9 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno9:checked ~ .progress9 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos9:checked ~ .progress9 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres9:checked ~ .progress9 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro9:checked ~ .progress9 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco9:checked ~ .progress9 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis9:checked ~ .progress9 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete9:checked ~ .progress9 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho9:checked ~ .progress9 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve9:checked ~ .progress9 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez9:checked ~ .progress9 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress10 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno10:checked ~ .progress10 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos10:checked ~ .progress10 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres10:checked ~ .progress10 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro10:checked ~ .progress10 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco10:checked ~ .progress10 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis10:checked ~ .progress10 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete10:checked ~ .progress10 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho10:checked ~ .progress10 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve10:checked ~ .progress10 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez10:checked ~ .progress10 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress11 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno11:checked ~ .progress11 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos11:checked ~ .progress11 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres11:checked ~ .progress11 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro11:checked ~ .progress11 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco11:checked ~ .progress11 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis11:checked ~ .progress11 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete11:checked ~ .progress11 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho11:checked ~ .progress11 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve11:checked ~ .progress11 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez11:checked ~ .progress11 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress12 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno12:checked ~ .progress12 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos12:checked ~ .progress12 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres12:checked ~ .progress12 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro12:checked ~ .progress12 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco12:checked ~ .progress12 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis12:checked ~ .progress12 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete12:checked ~ .progress12 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho12:checked ~ .progress12 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve12:checked ~ .progress12 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez12:checked ~ .progress12 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress13 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno13:checked ~ .progress13 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos13:checked ~ .progress13 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres13:checked ~ .progress13 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro13:checked ~ .progress13 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco13:checked ~ .progress13 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis13:checked ~ .progress13 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete13:checked ~ .progress13 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho13:checked ~ .progress13 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve13:checked ~ .progress13 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez13:checked ~ .progress13 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress14 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno14:checked ~ .progress14 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos14:checked ~ .progress14 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres14:checked ~ .progress14 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro14:checked ~ .progress14 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco14:checked ~ .progress14 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis14:checked ~ .progress14 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete14:checked ~ .progress14 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho14:checked ~ .progress14 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve14:checked ~ .progress14 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez14:checked ~ .progress14 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress15 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno15:checked ~ .progress15 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos15:checked ~ .progress15 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres15:checked ~ .progress15 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro15:checked ~ .progress15 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco15:checked ~ .progress15 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis15:checked ~ .progress15 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete15:checked ~ .progress15 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho15:checked ~ .progress15 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve15:checked ~ .progress15 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez15:checked ~ .progress15 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress16 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno16:checked ~ .progress16 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos16:checked ~ .progress16 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres16:checked ~ .progress16 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro16:checked ~ .progress16 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco16:checked ~ .progress16 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis16:checked ~ .progress16 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete16:checked ~ .progress16 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho16:checked ~ .progress16 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve16:checked ~ .progress16 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez16:checked ~ .progress16 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress17 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno17:checked ~ .progress17 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos17:checked ~ .progress17 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+
+    #tres17:checked ~ .progress17 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro17:checked ~ .progress17 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco17:checked ~ .progress17 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis17:checked ~ .progress17 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete17:checked ~ .progress17 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho17:checked ~ .progress17 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve17:checked ~ .progress17 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez17:checked ~ .progress17 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress18 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno18:checked ~ .progress18 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos18:checked ~ .progress18 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres18:checked ~ .progress18 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro18:checked ~ .progress18 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco18:checked ~ .progress18 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis18:checked ~ .progress18 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete18:checked ~ .progress18 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho18:checked ~ .progress18 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve18:checked ~ .progress18 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez18:checked ~ .progress18 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress19 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno19:checked ~ .progress19 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos19:checked ~ .progress19 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres19:checked ~ .progress19 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro19:checked ~ .progress19 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco19:checked ~ .progress19 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis19:checked ~ .progress19 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete19:checked ~ .progress19 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho19:checked ~ .progress19 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve19:checked ~ .progress19 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez19:checked ~ .progress19 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress20 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno20:checked ~ .progress20 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos20:checked ~ .progress20 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres20:checked ~ .progress20 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro20:checked ~ .progress20 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco20:checked ~ .progress20 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis20:checked ~ .progress20 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete20:checked ~ .progress20 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho20:checked ~ .progress20 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve20:checked ~ .progress20 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez20:checked ~ .progress20 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress21 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno21:checked ~ .progress21 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos21:checked ~ .progress21 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres21:checked ~ .progress21 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro21:checked ~ .progress21 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco21:checked ~ .progress21 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis21:checked ~ .progress21 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete21:checked ~ .progress21 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho21:checked ~ .progress21 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve21:checked ~ .progress21 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez21:checked ~ .progress21 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress22 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno22:checked ~ .progress22 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos22:checked ~ .progress22 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres22:checked ~ .progress22 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro22:checked ~ .progress22 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco22:checked ~ .progress22 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis22:checked ~ .progress22 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete22:checked ~ .progress22 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho22:checked ~ .progress22 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve22:checked ~ .progress22 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez22:checked ~ .progress22 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress23 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno23:checked ~ .progress23 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos23:checked ~ .progress23 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres23:checked ~ .progress23 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro23:checked ~ .progress23 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco23:checked ~ .progress23 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis23:checked ~ .progress23 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete23:checked ~ .progress23 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho23:checked ~ .progress23 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve23:checked ~ .progress23 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez23:checked ~ .progress23 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress24 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno24:checked ~ .progress24 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos24:checked ~ .progress24 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres24:checked ~ .progress24 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro24:checked ~ .progress24 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco24:checked ~ .progress24 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis24:checked ~ .progress24 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete24:checked ~ .progress24 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho24:checked ~ .progress24 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve24:checked ~ .progress24 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez24:checked ~ .progress24 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress25 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno25:checked ~ .progress25 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos25:checked ~ .progress25 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres25:checked ~ .progress25 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro25:checked ~ .progress25 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco25:checked ~ .progress25 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis25:checked ~ .progress25 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete25:checked ~ .progress25 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho25:checked ~ .progress25 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve25:checked ~ .progress25 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez25:checked ~ .progress25 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress26 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno26:checked ~ .progress26 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos26:checked ~ .progress26 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres26:checked ~ .progress26 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro26:checked ~ .progress26 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco26:checked ~ .progress26 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis26:checked ~ .progress26 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete26:checked ~ .progress26 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho26:checked ~ .progress26 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve26:checked ~ .progress26 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez26:checked ~ .progress26 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress27 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno27:checked ~ .progress27 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos27:checked ~ .progress27 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres27:checked ~ .progress27 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro27:checked ~ .progress27 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco27:checked ~ .progress27 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis27:checked ~ .progress27 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete27:checked ~ .progress27 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho27:checked ~ .progress27 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve27:checked ~ .progress27 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez27:checked ~ .progress27 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress28 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno28:checked ~ .progress28 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos28:checked ~ .progress28 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres28:checked ~ .progress28 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro28:checked ~ .progress28 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco28:checked ~ .progress28 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis28:checked ~ .progress28 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete28:checked ~ .progress28 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho28:checked ~ .progress28 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve28:checked ~ .progress28 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez28:checked ~ .progress28 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress29 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno29:checked ~ .progress29 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos29:checked ~ .progress29 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres29:checked ~ .progress29 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro29:checked ~ .progress29 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco29:checked ~ .progress29 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis29:checked ~ .progress29 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete29:checked ~ .progress29 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho29:checked ~ .progress29 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve29:checked ~ .progress29 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez29:checked ~ .progress29 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress30 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno30:checked ~ .progress30 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos30:checked ~ .progress30 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres30:checked ~ .progress30 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro30:checked ~ .progress30 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco30:checked ~ .progress30 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis30:checked ~ .progress30 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete30:checked ~ .progress30 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho30:checked ~ .progress30 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve30:checked ~ .progress30 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez30:checked ~ .progress30 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress31 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno31:checked ~ .progress31 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos31:checked ~ .progress31 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres31:checked ~ .progress31 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro31:checked ~ .progress31 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco31:checked ~ .progress31 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis31:checked ~ .progress31 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete31:checked ~ .progress31 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho31:checked ~ .progress31 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve31:checked ~ .progress31 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez31:checked ~ .progress31 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress32 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno32:checked ~ .progress32 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos32:checked ~ .progress32 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres32:checked ~ .progress32 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro32:checked ~ .progress32 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco32:checked ~ .progress32 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis32:checked ~ .progress32 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete32:checked ~ .progress32 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho32:checked ~ .progress32 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve32:checked ~ .progress32 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez32:checked ~ .progress32 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress33 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno33:checked ~ .progress33 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos33:checked ~ .progress33 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres33:checked ~ .progress33 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro33:checked ~ .progress33 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco33:checked ~ .progress33 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis33:checked ~ .progress33 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete33:checked ~ .progress33 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho33:checked ~ .progress33 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve33:checked ~ .progress33 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez33:checked ~ .progress33 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress34 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno34:checked ~ .progress34 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos34:checked ~ .progress34 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres34:checked ~ .progress34 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro34:checked ~ .progress34 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco34:checked ~ .progress34 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis34:checked ~ .progress34 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete34:checked ~ .progress34 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho34:checked ~ .progress34 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve34:checked ~ .progress34 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez34:checked ~ .progress34 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress35 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno35:checked ~ .progress35 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos35:checked ~ .progress35 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres35:checked ~ .progress35 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro35:checked ~ .progress35 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco35:checked ~ .progress35 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis35:checked ~ .progress35 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete35:checked ~ .progress35 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho35:checked ~ .progress35 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve35:checked ~ .progress35 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez35:checked ~ .progress35 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress36 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno36:checked ~ .progress36 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos36:checked ~ .progress36 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres36:checked ~ .progress36 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro36:checked ~ .progress36 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco36:checked ~ .progress36 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis36:checked ~ .progress36 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete36:checked ~ .progress36 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho36:checked ~ .progress36 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve36:checked ~ .progress36 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez36:checked ~ .progress36 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress37 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno37:checked ~ .progress37 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos37:checked ~ .progress37 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres37:checked ~ .progress37 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro37:checked ~ .progress37 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco37:checked ~ .progress37 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis37:checked ~ .progress37 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete37:checked ~ .progress37 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho37:checked ~ .progress37 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve37:checked ~ .progress37 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez37:checked ~ .progress37 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress38 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno38:checked ~ .progress38 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos38:checked ~ .progress38 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres38:checked ~ .progress38 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro38:checked ~ .progress38 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco38:checked ~ .progress38 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis38:checked ~ .progress38 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete38:checked ~ .progress38 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho38:checked ~ .progress38 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve38:checked ~ .progress38 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez38:checked ~ .progress38 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress39 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno39:checked ~ .progress39 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos39:checked ~ .progress39 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres39:checked ~ .progress39 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro39:checked ~ .progress39 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco39:checked ~ .progress39 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis39:checked ~ .progress39 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete39:checked ~ .progress39 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho39:checked ~ .progress39 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve39:checked ~ .progress39 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez39:checked ~ .progress39 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress40 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno40:checked ~ .progress40 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos40:checked ~ .progress40 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres40:checked ~ .progress40 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro40:checked ~ .progress40 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco40:checked ~ .progress40 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis40:checked ~ .progress40 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete40:checked ~ .progress40 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho40:checked ~ .progress40 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve40:checked ~ .progress40 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez40:checked ~ .progress40 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress41 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno41:checked ~ .progress41 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos41:checked ~ .progress41 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres41:checked ~ .progress41 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro41:checked ~ .progress41 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco41:checked ~ .progress41 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis41:checked ~ .progress41 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete41:checked ~ .progress41 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho41:checked ~ .progress41 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve41:checked ~ .progress41 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez41:checked ~ .progress41 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
+
+    .progress42 {
+        padding: 6px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+    }
+
+    #uno42:checked ~ .progress42 > .progress-bar {
+        width: 10%;
+        background-color: #ff0000;
+    }
+
+    #dos42:checked ~ .progress42 > .progress-bar {
+        width: 20%;
+        background-color: #ff5100;
+    }
+
+    #tres42:checked ~ .progress42 > .progress-bar {
+        width: 30%;
+        background-color: #f27d1e;
+    }
+
+    #cuatro42:checked ~ .progress42 > .progress-bar {
+        width: 40%;
+        background-color: #ffd900;
+    }
+
+    #cinco42:checked ~ .progress42 > .progress-bar {
+        width: 50%;
+        background-color: #cde01e;
+    }
+
+    #seis42:checked ~ .progress42 > .progress-bar {
+        width: 60%;
+        background-color: #a6e01e;
+    }
+
+    #siete42:checked ~ .progress42 > .progress-bar {
+        width: 70%;
+        background-color: #89ff02;
+    }
+
+    #ocho42:checked ~ .progress42 > .progress-bar {
+        width: 80%;
+        background-color: #75d804;
+    }
+
+    #nueve42:checked ~ .progress42 > .progress-bar {
+        width: 90%;
+        background-color: #5aa504;
+    }
+
+    #diez42:checked ~ .progress42 > .progress-bar {
+        width: 100%;
+        background-color: #3a571a;
+    }
