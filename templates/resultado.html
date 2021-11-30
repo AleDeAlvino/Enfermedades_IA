@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/hoja-estilos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Heebo:wght@400;900&family=Montserrat:wght@100&family=Mukta:wght@200;800&family=Nunito+Sans:wght@900&family=PT+Sans:ital,wght@1,700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@700&family=Zen+Kaku+Gothic+Antique:wght@300&family=Zen+Maru+Gothic:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https: //fonts.googleapis.com/css2? family = Fira + Sans: ital @ 1 & family = Heebo: wght @ 400; 900 & family = Montserrat: wght @ 100 & family = Mukta: wght @ 200; 800 & family = Nunito + Sans: wght @ 900 & family = PT + Sans: ital, wght @ 1,700 & family = Roboto: wght @ 400; 500; 700 & familia = Signika + Negativo: wght @ 700 &family = Ubuntu: wght @ 700 & family = Zen + Kaku + Gothic + Antique:wght @ 300 & family =Zen + Maru + Gothic: wght @ 300 & display = swap "
+        rel=" stylesheet ">
+    <title>Resultados Finales</title>
 </head>
-<body>
+<body class="pantalla-dos" id="pantalla-2-2">
+
+    <div class="pantalla-imagen-pastillas">
+        <img src="../static/images/fondo-4.jpeg" alt=""  id="fondo-4">
+    </div>
+
+    <div class="cuadro-resultados">
+
+        <div class="diagnostico-siguiente-text">
+            <h2>
+                Tu diagnostico es el siguiente 
+               </h2>
+        </div>
+       
+        <div class="se-determino-text">
+            <h4>
+                Se ha determinado que usted tiene: 
+            </h4>
+        </div>
+        <div class="nom-enfermedad">
+            <h5>  {{nombre}} </h5>
+        <br>   
+        </div>
+        <div class="text-descripcion">
+            <h5>
+                Descripcion: {{descripcion}}
+                <br>
+                <br>
+                Sintomas: 
+                {% for sintoma in sintomas %}
+                    <li>{{sintoma}}</li>
+                {% endfor %}
+                <br>
+                <br>
+                Tratamiento: {{tratamiento}}
+            </h5>
+            
+
+        </div>
     
+
+       
+
+    </div>
+    <footer>
+        <div class="texto-footer">
+            <h3>Inteligencia Artificial <br> Facultad de Informática <br> 2021 </h3>
+        </div>
+           
+    </footer>    
 </body>
 </html>

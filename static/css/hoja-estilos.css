@@ -2640,3 +2640,37 @@ body {
         width: 100%;
         background-color: #3a571a;
     }
+
+/****Pantalla de registro***/
+.pantalla-imagen-pastillas{
+    padding-top:5% ;
+}
+#fondo-4{
+    width: 45%;
+}
+.cuadro-resultados{
+    background: #E2CDBA;
+    width:52.4%;
+    padding:20px;
+    color:#000;
+    margin-left:45%;
+    margin-top: -33%;
+    padding-bottom: 3%;
+}
+.diagnostico-siguiente-text{
+    color: #ffffff;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+}
+.nom-enfermedad{
+    font-size: 150%;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    color: #756456;
+}
+.text-descripcion{
+    text-align: center;
+    font-size: 110%;
+    color: #35363A;
+    font-family: 'Montserrat', sans-serif;
+}

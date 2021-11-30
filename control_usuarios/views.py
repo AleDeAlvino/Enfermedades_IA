@@ -89,7 +89,6 @@ def preguntas_view(request):
               }
         }
         
-    
     if request.method == 'POST':
       
         pe1= request.POST['respuesta1']
@@ -357,7 +356,7 @@ def preguntas_view(request):
         print(prom)
         print(enfermedades[closestKey]["promedio"])
         print(minDif)
-        
+        return render (request, 'resultado.html',{'nombre': enfermedades[closestKey]["nombre"], 'sintomas': enfermedades[closestKey]["sintomas"], 'descripcion': enfermedades[closestKey]["descripcion"], 'tratamiento': enfermedades[closestKey]["tratamiento"]})
 
         
 
